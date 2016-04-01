@@ -1,0 +1,59 @@
+<!doctype html>
+<html ng-app="HelloAngular">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <div class="panel-title">双向数据绑定</div>
+            </div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="form-horizontal" ng-controller="UserInforCtrl">
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">UserName:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="User Name" ng-model="userInfor.name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Email:</label>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Recommend Gmail" ng-model="userInfor.email"></input>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-4 control-label">Password:</label>
+                                <div class="col-md-6">
+                                    <input type="password" class="form-control" placeholder=" Made by Number _ and alphabet" ng-model="userInfor.password">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-6">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" ng-model="userInfor.autoLogin">Remember Me</input>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-4 col-md-6">
+                                    <button class="btn btn-default" ng-click="getFormData()">Get the input value</button>
+                                    <button class="btn btn-default" ng-click="setFormData()">Set the input value</button>
+                                    <button class="btn btn-default" ng-click="resetFormData()">Reset the input value</button>
+
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="lib/angular.min.js"></script>
+    <script src="app.js"></script>
+</html>
